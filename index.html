@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini projetos</title>
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calcTask_style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Mini Projetos</h1>
+        <br>
+        <p>Projetos feitos em aula</p>
+    </header>
+
+    <div class="projects">
+        <div class="project" id="calculadora">
+            <h1>Calculadora</h1>
+            <div class="calculadora-bd">
+                <input type="text" id="display" disabled>
+
+                <div class="botoes">
+                    <button onclick="limpar()">C</button>
+                    <button onclick="backspace()">⌫</button>
+                    <button onclick="porcentagem()">%</button>
+                    <button onclick="operador('/')">÷</button>
+
+                    <button onclick="numero('7')">7</button>
+                    <button onclick="numero('8')">8</button>
+                    <button onclick="numero('9')">9</button>
+                    <button onclick="operador('*')">×</button>
+
+                    <button onclick="numero('4')">4</button>
+                    <button onclick="numero('5')">5</button>
+                    <button onclick="numero('6')">6</button>
+                    <button onclick="operador('-')">−</button>
+
+                    <button onclick="numero('1')">1</button>
+                    <button onclick="numero('2')">2</button>
+                    <button onclick="numero('3')">3</button>
+                    <button onclick="operador('+')">+</button>
+
+                    <button class="zero" onclick="numero('0')">0</button>
+                    <button onclick="numero('.')">.</button>
+                    <button onclick="calcular()">=</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project" id="conversor">
+            <h1>Conversor de Medidas</h1>
+            <div class="conversor-bd">
+                <select id="categoria">
+                    <option value="comprimento">Comprimento</option>
+                    <option value="volume">Volume</option>
+                    <option value="massa">Massa</option>
+                </select>
+
+                <div class="linha">
+                    <div class="campo">
+                        <input type="number" id="valorDe" value="1">
+                        <select id="unidadeDe">
+                            <!-- completado em js -->
+                        </select>
+                    </div>
+
+                    <span class="igual">=</span>
+
+                    <div class="campo">
+                        <input type="number" id="valorPara" disabled>
+                        <select id="unidadePara">
+                            <!-- completado em js -->
+                        </select>
+                    </div>
+                </div>
+
+                <p class="formula">
+                    <span>Fórmula</span>
+                    <span id="textoFormula"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="project" id="tarefas">
+            <h1>Lista de Tarefas</h1>
+
+            <div class="row">
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card tarefa-card">
+                                <input type="text" class="form-control" placeholder="Digite aqui" name="tarefa"
+                                    id="inputTarefa" autofocus>
+
+                                <button class="btn" type="button" id="btnAdicionar">
+                                    Adicionar Tarefa
+                                </button>
+
+                                <ul id="listaTarefas" class="list-group"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/conversor.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/tarefas.js"></script>
+</body>
+
+</html>

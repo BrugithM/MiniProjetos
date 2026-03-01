@@ -1,0 +1,10 @@
+:root{
+    --bg-color: #CDB885;
+    --accent-color: #556b2f;
+    --font-color: #000;
+    --font-color2: #fff;
+    --details: #ECE7D1;
+    --transition-speed: 0.3s;
+    --default-padding: 20px;
+    --default-radius: 8px;
+}
